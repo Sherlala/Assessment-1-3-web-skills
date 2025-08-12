@@ -1,9 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Page</title>
+  <meta charset="utf-8" />
+  <title>Header</title>
+
+  <style>
+    /* ==== variables used in later tasks ==== */
+    :root{
+      --c-background-color: #0f2c2e;
+      --c-background-highlights: #0a3b3e;
+      --base-font-color: #eef7f2;
+      --c-magenta: #ff47c1;
+      --c-cyan: #11cdef;
+      --c-green: #8fd694;
+      --c-red: #e84545;
+      --c-blue: #348ceb;
+      --c-yellow: #ffd447;
+    }
+
+    /* Task 1: page background & base text */
+    body{
+      background: var(--c-background-color);
+      color: var(--base-font-color);
+      margin: 0;
+      font-family: system-ui, Arial, sans-serif;
+    }
+
+    /* Task 2: header & footer background */
+    header, footer{
+      background: var(--c-background-highlights);
+      color: var(--base-font-color);
+      padding: 1rem;
+    }
+
+    /* Task 3: make sure text in these areas is base-font-color */
+    main, header, footer{
+      color: var(--base-font-color);
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, GitHub!</h1>
+  <header>
+    <h1>Header</h1>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <form role="search">
+      <label for="q" class="sr-only">Search query</label>
+      <input id="q" name="q" type="search" placeholder="Search query">
+      <button type="submit">Go!</button>
+    </form>
+  </header>
+
+  <div class="page">
+    <main>
+      <article>
+        <h1>Article heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+
+        <section class="subsection">
+          <h2>Subsection</h2>
+          <p>Donec ut libero sed accumsan vehicula…</p>
+        </section>
+
+        <section class="subsection">
+          <h2>Another subsection</h2>
+          <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus…</p>
+        </section>
+      </article>
+
+      <aside>
+        <h2>Related</h2>
+        <ul>
+          <li><a href="#">Oh I do like to be beside the seaside</a></li>
+          <li><a href="#">Oh I do like to be beside the sea</a></li>
+          <li><a href="#">Although in the North of England</a></li>
+          <li><a href="#">It never stops raining</a></li>
+          <li><a href="#">Oh well…</a></li>
+        </ul>
+      </aside>
+    </main>
+  </div>
+
+  <footer>
+    <p>©Copyright 2050 by nobody. All rights reversed.</p>
+  </footer>
 </body>
 </html>
